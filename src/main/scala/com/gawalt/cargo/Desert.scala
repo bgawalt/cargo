@@ -46,6 +46,9 @@ class Desert2() {
       while (i < fuelCans.length) {
         val can = fuelCans(i)
         if (can.distance >= carPosition && can.distance <= newPosition) {
+          val distTraveled = can.distance - carPosition
+          carFuel -= distTraveled
+          carPosition = can.distance
           fuelCans(i) = pourFuel(can)
         }
         i += 1
@@ -56,6 +59,9 @@ class Desert2() {
       while (i >= 0) {
         val can = fuelCans(i)
         if (can.distance <= carPosition && can.distance >= newPosition) {
+          val distTraveled = carPosition - can.distance
+          carFuel -= distTraveled
+          carPosition = can.distance
           fuelCans(i) = pourFuel(can)
         }
         i -= 1
