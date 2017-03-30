@@ -11,7 +11,8 @@ case class GoCar(decisionWeights: Array[Array[Double]],
 
 }
 
-
-case class Move(forward: Boolean, amount: Double)
-
-case class DumpFuel(distance: Double, amount: Double)
+trait Decision {
+  val amount: Double
+}
+case class Move(forward: Boolean, amount: Double) extends Decision
+case class GasCan(distance: Double, amount: Double) extends Decision
