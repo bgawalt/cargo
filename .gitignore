@@ -1,0 +1,6 @@
+*.swp
+*.wav
+.DS_Store
+.idea/
+target/
+results/
