@@ -53,6 +53,7 @@ class Desert2() {
         }
         i += 1
       }
+      carPosition = newPosition
     } else {
       val newPosition = carPosition - move.amount
       var i = fuelCans.length - 1
@@ -66,6 +67,7 @@ class Desert2() {
         }
         i -= 1
       }
+      carPosition = newPosition
     }
   }
 
